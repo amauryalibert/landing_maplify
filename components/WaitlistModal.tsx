@@ -62,7 +62,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
 
       setAlreadyExists(false);
       setSubmitted(true);
-    } catch (err) {
+    } catch {
       setError("Une erreur est survenue. Réessayez dans un instant.");
     } finally {
       setSubmitting(false);
@@ -88,7 +88,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
           Votre premier scénario commence ici.
         </h2>
         <p className="mt-3 text-sm text-[var(--text-secondary)]">
-          Maplify est encore en développement. Rejoignez la waitlist pour être informé dès l'ouverture de l'éditeur.
+          Maplify est encore en développement. Rejoignez la waitlist pour être informé dès l&apos;ouverture de l&apos;éditeur.
         </p>
 
         <form className="mt-6 space-y-6" onSubmit={handleSubmit}>

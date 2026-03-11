@@ -15,19 +15,33 @@ export const metadata: Metadata = {
     template: "%s — Maplify"
   },
   description:
-    "Créez des scénarios d'animations cartographiques et exportez des vidéos verticales en quelques minutes.",
+    "Maplify est un éditeur visuel en ligne pour créer des vidéos de cartes animées. Timeline, prévisualisation en direct, export MP4 vertical (TikTok, Shorts, Reels) et JSON. Pour créateurs, journalistes, enseignants.",
+  keywords: [
+    "animation cartographique",
+    "carte animée",
+    "vidéo carte",
+    "export vidéo vertical",
+    "TikTok",
+    "Reels",
+    "Shorts",
+    "éditeur carte",
+    "scénario carte",
+    "Maplify"
+  ],
   metadataBase: new URL("https://maplify.studio"),
   alternates: {
     canonical: "/"
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large"
   },
   openGraph: {
     title: "Maplify — Éditeur d'animations cartographiques",
     description:
-      "Créez des scénarios d'animations cartographiques et exportez des vidéos verticales en quelques minutes.",
+      "Créez des scénarios d'animations cartographiques et exportez des vidéos verticales en quelques minutes. Pour créateurs, journalistes, enseignants.",
     url: "https://maplify.studio",
     siteName: "Maplify",
     locale: "fr_FR",

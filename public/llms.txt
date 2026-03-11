@@ -1,0 +1,26 @@
+# Maplify
+
+> Maplify est un éditeur visuel en ligne pour créer des scénarios d'animations cartographiques et exporter des vidéos verticales (format TikTok, Shorts, Reels). Créateurs de contenu, journalistes, enseignants et équipes communication peuvent créer des vidéos de cartes animées en quelques minutes.
+
+## Description
+
+Maplify propose une timeline visuelle pour composer des scénarios (caméra, zones, frontières, texte, images), une prévisualisation en direct pendant l'édition, l'export vidéo MP4 vertical et l'export JSON pour réutiliser les scénarios. Un agent IA intégré aide à structurer les scénarios et accélérer la production.
+
+## Cibles
+
+- Créateurs de contenu : storytelling géographique et vidéos explicatives
+- Journalistes : cartes pour expliquer l'actualité
+- Enseignants : supports visuels pour expliquer des territoires
+- Communication territoriale : présenter une région ou un projet
+
+## Liens principaux
+
+- [Accueil](https://maplify.studio/) : page d'accueil et présentation
+- [Mentions légales](https://maplify.studio/mentions-legales)
+- [Politique de confidentialité](https://maplify.studio/confidentialite)
+- [Conditions générales d'utilisation](https://maplify.studio/cgu)
+
+## Contact
+
+- Email : contact@maplify.studio
+- Site : https://maplify.studio

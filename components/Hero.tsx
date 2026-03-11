@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="mt-16 grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)] bg-[var(--accent-muted)] px-3 py-1 text-xs text-[var(--accent)]">
-              Éditeur d'animations cartographiques
+              Éditeur d&apos;animations cartographiques
             </div>
             <h1 className="font-display text-5xl font-semibold tracking-tight text-[var(--text-primary)] md:text-6xl">
               Maplify
