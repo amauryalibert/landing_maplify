@@ -9,10 +9,35 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Maplify — Éditeur d'animations cartographiques",
+  title: {
+    default: "Maplify — Éditeur d'animations cartographiques",
+    template: "%s — Maplify"
+  },
   description:
     "Créez des scénarios d'animations cartographiques et exportez des vidéos verticales en quelques minutes.",
-  metadataBase: new URL("https://maplify.studio")
+  metadataBase: new URL("https://maplify.studio"),
+  alternates: {
+    canonical: "/"
+  },
+  robots: {
+    index: true,
+    follow: true
+  },
+  openGraph: {
+    title: "Maplify — Éditeur d'animations cartographiques",
+    description:
+      "Créez des scénarios d'animations cartographiques et exportez des vidéos verticales en quelques minutes.",
+    url: "https://maplify.studio",
+    siteName: "Maplify",
+    locale: "fr_FR",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maplify — Éditeur d'animations cartographiques",
+    description:
+      "Créez des scénarios d'animations cartographiques et exportez des vidéos verticales en quelques minutes."
+  }
 };
 
 export default function RootLayout({
