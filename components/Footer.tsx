@@ -37,6 +37,7 @@ export default function Footer() {
             </Link>
           ))}
         </div>
+        <div className="text-xs text-[var(--text-muted)]">© 2026 Maplify. Tous droits réservés.</div>
       </div>
     </footer>
   );
