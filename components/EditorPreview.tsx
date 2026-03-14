@@ -1,17 +1,44 @@
 import TimelinePreview from "./TimelinePreview";
 
-export default function EditorPreview() {
+type EditorPreviewProps = {
+  label: string;
+  heading: string;
+  subheading: string;
+  caption: string;
+  aiTitle: string;
+  aiDesc: string;
+  timelineScenario: string;
+  blockCamera: string;
+  blockZone: string;
+  blockRoute: string;
+  blockLabel: string;
+  timelineBlockDesc: string;
+};
+
+export default function EditorPreview({
+  label,
+  heading,
+  subheading,
+  caption,
+  aiTitle,
+  aiDesc,
+  timelineScenario,
+  blockCamera,
+  blockZone,
+  blockRoute,
+  blockLabel,
+  timelineBlockDesc
+}: EditorPreviewProps) {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-[55px] pb-[55px]">
       <div className="flex items-end justify-between gap-6">
         <div>
-          <p className="text-xs uppercase tracking-[0.28em] text-[var(--text-muted)]">Aperçu</p>
+          <p className="text-xs uppercase tracking-[0.28em] text-[var(--text-muted)]">{label}</p>
           <h2 className="mt-3 text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
-            L’éditeur Maplify en action.
+            {heading}
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-[var(--text-secondary)]">
-            Préparez vos scènes, ajustez la caméra, placez vos labels et suivez la timeline comme dans un outil de
-            montage.
+            {subheading}
           </p>
         </div>
         <div className="hidden h-px flex-1 bg-[var(--border)] md:block" />
@@ -38,17 +65,23 @@ export default function EditorPreview() {
             </div>
           </div>
           <div className="mt-4 text-xs text-[var(--text-secondary)]">
-            Interface complète avec panneau d’actions, timeline et prévisualisation.
+            {caption}
           </div>
         </div>
 
         <div>
-          <TimelinePreview />
+          <TimelinePreview
+            timelineScenario={timelineScenario}
+            blockCamera={blockCamera}
+            blockZone={blockZone}
+            blockRoute={blockRoute}
+            blockLabel={blockLabel}
+            timelineBlockDesc={timelineBlockDesc}
+          />
           <div className="mt-6 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] p-6">
-            <h3 className="text-lg font-semibold text-[var(--text-primary)]">Agent IA intégré</h3>
+            <h3 className="text-lg font-semibold text-[var(--text-primary)]">{aiTitle}</h3>
             <p className="mt-3 text-sm text-[var(--text-secondary)]">
-              Un chat agent IA vous aide à structurer un scénario, générer des idées de séquences et accélérer la
-              production de vos vidéos.
+              {aiDesc}
             </p>
           </div>
         </div>

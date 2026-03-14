@@ -35,6 +35,21 @@ body {
   letter-spacing: -0.02em;
 }
 
+/* Chinese Simplified — system fonts with CJK support */
+.font-cjk,
+.font-cjk .font-display {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  letter-spacing: 0;
+}
+
+/* Arabic — system fonts with RTL support */
+.font-arabic,
+.font-arabic .font-display {
+  font-family: "Geeza Pro", "Segoe UI", "Arial", "Noto Sans Arabic", sans-serif;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+
 ::selection {
   background: rgba(79, 126, 247, 0.35);
 }

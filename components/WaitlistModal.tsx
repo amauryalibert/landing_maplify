@@ -1,13 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
-const usages = [
-  "Création de vidéos géographiques",
-  "Journalisme / actualité",
-  "Enseignement",
-  "Marketing territorial"
-];
-const sources = ["X, Facebook, Reddit", "YouTube", "TikTok, Instagram reels, YT Shorts", "ChatGPT, Claude, Gemini, etc."];
+import { useTranslations } from "next-intl";
 
 type WaitlistModalProps = {
   open: boolean;
@@ -15,6 +9,7 @@ type WaitlistModalProps = {
 };
 
 export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
+  const t = useTranslations("waitlist");
   const [email, setEmail] = useState("");
   const [usage, setUsage] = useState("");
   const [source, setSource] = useState("");
@@ -22,6 +17,9 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
   const [alreadyExists, setAlreadyExists] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  const usages = [t("usage0"), t("usage1"), t("usage2"), t("usage3")];
+  const sources = [t("source0"), t("source1"), t("source2"), t("source3")];
 
   useEffect(() => {
     if (!open) return;
@@ -57,13 +55,13 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
-        throw new Error(data?.error || "Erreur lors de l'inscription.");
+        throw new Error(data?.error || t("errorGeneric"));
       }
 
       setAlreadyExists(false);
       setSubmitted(true);
     } catch {
-      setError("Une erreur est survenue. Réessayez dans un instant.");
+      setError(t("errorGeneric"));
     } finally {
       setSubmitting(false);
     }
@@ -80,25 +78,27 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
           onClick={onClose}
           className="absolute right-4 top-4 rounded-md border border-[var(--border)] px-2 py-1 text-xs text-[var(--text-secondary)] transition hover:border-[var(--border-light)]"
         >
-          Fermer
+          {t("close")}
         </button>
 
         <div className="text-xs font-semibold tracking-[0.3em] text-[var(--text-muted)]">MAPLIFY</div>
         <h2 className="mt-3 text-2xl font-semibold text-[var(--text-primary)]">
-          Votre premier scénario commence ici.
+          {t("title")}
         </h2>
         <p className="mt-3 text-sm text-[var(--text-secondary)]">
-          Maplify est encore en développement. Rejoignez la waitlist pour être informé dès l&apos;ouverture de l&apos;éditeur.
+          {t("subtitle")}
         </p>
 
         <form className="mt-6 space-y-6" onSubmit={handleSubmit}>
           <div>
-            <label className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">Email</label>
+            <label className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">
+              {t("emailLabel")}
+            </label>
             <input
               type="email"
               required
               disabled={submitting || submitted}
-              placeholder="nom@email.com"
+              placeholder={t("emailPlaceholder")}
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               className="mt-2 w-full rounded-md border border-[var(--border)] bg-[var(--bg-tertiary)] px-4 py-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:shadow-[0_0_0_3px_rgba(79,126,247,0.2)]"
@@ -107,7 +107,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
 
           <fieldset className="space-y-3">
             <legend className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">
-              Utilisation principale
+              {t("usageLabel")}
             </legend>
             <div className="grid gap-2 text-sm text-[var(--text-secondary)]">
               {usages.map((usageOption) => (
@@ -129,7 +129,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
 
           <fieldset className="space-y-3">
             <legend className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">
-              Comment avez-vous découvert Maplify ?
+              {t("sourceLabel")}
             </legend>
             <div className="grid gap-2 text-sm text-[var(--text-secondary)]">
               {sources.map((sourceOption) => (
@@ -157,20 +157,20 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
             >
               {submitted
                 ? alreadyExists
-                  ? "✓ Déjà inscrit"
-                  : "✓ Scénario enregistré"
+                  ? t("submitAlreadyJoined")
+                  : t("submitSaved")
                 : submitting
-                ? "Enregistrement…"
-                : "Rejoindre la waitlist"}
+                  ? t("submitSaving")
+                  : t("submitJoin")}
             </button>
             <p className="text-xs text-[var(--text-muted)]">
-              Accès anticipé pour les premiers utilisateurs.
+              {t("earlyAccess")}
             </p>
           </div>
 
           {submitted && (
             <p className="text-xs text-[var(--accent)]">
-              ✓ {alreadyExists ? "Vous êtes déjà inscrit." : "Vous êtes sur la waitlist."}
+              ✓ {alreadyExists ? t("successAlready") : t("successNew")}
             </p>
           )}
           {error && <p className="text-xs text-red-400">{error}</p>}

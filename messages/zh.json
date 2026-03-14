@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Maplify — 地图动画视频编辑器",
+    "description": "Maplify 是一款在线可视化编辑器，用于制作动态地图视频。时间轴、实时预览、竖版 MP4 导出（TikTok、Shorts、Reels）及 JSON。适合创作者、记者和教育工作者。",
+    "ogTitle": "Maplify — 地图动画视频编辑器",
+    "ogDescription": "创建地图动画脚本，数分钟内导出竖版视频。适合内容创作者、记者和教育工作者。"
+  },
+  "nav": {
+    "editor": "编辑器",
+    "docs": "文档",
+    "joinWaitlist": "加入候补名单"
+  },
+  "hero": {
+    "badge": "地图动画视频编辑器",
+    "subtitle": "制作动态地图视频。",
+    "description": "Maplify 是一款可视化编辑器，用于创建地图动画脚本并导出竖屏视频。",
+    "openEditor": "打开编辑器",
+    "opening": "正在打开…",
+    "joinWaitlist": "加入候补名单",
+    "tagExport": "竖版 MP4 导出",
+    "tagScenarios": "可复用 JSON 脚本",
+    "scenario": "脚本 · 00:07",
+    "loopPlayback": "循环播放"
+  },
+  "features": {
+    "label": "功能特性",
+    "heading": "构建地图动画脚本。",
+    "timelineTitle": "可视化时间轴",
+    "timelineDesc": "编排动作序列：镜头移动、区域标注、边界划定、文字与图片。",
+    "exportTitle": "视频导出",
+    "exportDesc": "生成适配 TikTok、Shorts 或 Reels 的竖版视频。",
+    "jsonTitle": "JSON 导出",
+    "jsonDesc": "保存并复用您的脚本。",
+    "aiTitle": "AI 助手",
+    "aiDesc": "AI 对话助手，引导创作流程，加速视频生产。"
+  },
+  "preview": {
+    "label": "功能预览",
+    "heading": "Maplify 编辑器实操演示。",
+    "subheading": "准备场景、调整镜头、放置标签，像专业剪辑工具一样掌控时间轴。",
+    "caption": "完整界面：操作面板、时间轴与实时预览一体化。",
+    "aiTitle": "内置 AI 助手",
+    "aiDesc": "AI 对话助手帮助您构建脚本、生成创意序列，全面提速视频制作流程。",
+    "timelineScenario": "脚本",
+    "blockCamera": "镜头",
+    "blockZone": "区域",
+    "blockRoute": "路线",
+    "blockLabel": "标签",
+    "timelineBlockDesc": "每个区块代表时间轴上的一个动作：镜头、区域、路线、标签。"
+  },
+  "audience": {
+    "label": "适用人群",
+    "heading": "谁适合使用？",
+    "creatorsTitle": "内容创作者",
+    "creatorsDesc": "地理叙事与科普解说视频。",
+    "journalistsTitle": "新闻记者",
+    "journalistsDesc": "用地图直观呈现时事新闻。",
+    "teachersTitle": "教育工作者",
+    "teachersDesc": "讲解地理与区域的可视化教学素材。",
+    "territorialTitle": "政府与机构传播",
+    "territorialDesc": "展示地区特色或本地重点项目。"
+  },
+  "cta": {
+    "label": "立即开始",
+    "heading": "制作您的第一个地图视频。",
+    "subheading": "编写脚本、制作动画，数分钟内导出竖版视频。",
+    "openEditor": "打开编辑器",
+    "joinWaitlist": "加入候补名单"
+  },
+  "footer": {
+    "copyright": "© 2026 Maplify 保留所有权利。",
+    "editor": "编辑器",
+    "docs": "文档",
+    "github": "GitHub",
+    "contact": "联系我们",
+    "legal": "法律声明",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
+  },
+  "waitlist": {
+    "title": "您的第一个脚本从这里开始。",
+    "subtitle": "Maplify 仍在开发中。加入候补名单，编辑器开放时第一时间获取通知。",
+    "emailLabel": "电子邮件",
+    "emailPlaceholder": "name@email.com",
+    "usageLabel": "主要用途",
+    "sourceLabel": "您是如何发现 Maplify 的？",
+    "submitJoin": "加入候补名单",
+    "submitAlreadyJoined": "✓ 已注册",
+    "submitSaved": "✓ 脚本已保存",
+    "submitSaving": "保存中…",
+    "earlyAccess": "首批用户可获得优先访问权。",
+    "successAlready": "您已注册。",
+    "successNew": "您已加入候补名单。",
+    "errorGeneric": "出现错误，请稍后重试。",
+    "close": "关闭",
+    "usage0": "地理视频制作",
+    "usage1": "新闻报道",
+    "usage2": "教育教学",
+    "usage3": "区域营销",
+    "source0": "X、Facebook、Reddit",
+    "source1": "YouTube",
+    "source2": "TikTok、Instagram Reels、YT Shorts",
+    "source3": "ChatGPT、Claude、Gemini 等"
+  },
+  "langSwitcher": {
+    "label": "语言",
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "zh": "中文",
+    "ar": "العربية"
+  },
+  "faq": {
+    "q1": "Maplify 是什么？",
+    "a1": "Maplify 是一款在线可视化编辑器，用于创建地图动画脚本并导出竖版视频（TikTok、Shorts、Reels 格式）。提供时间轴、实时预览、MP4 与 JSON 导出，以及帮助构建脚本的 AI 助手。",
+    "q2": "Maplify 适合哪些用户？",
+    "a2": "Maplify 面向内容创作者、记者、教育工作者及政府机构传播团队，帮助他们创作地理叙事、新闻报道、教学素材或地区展示类动态地图视频。",
+    "q3": "Maplify 有哪些功能？",
+    "a3": "可视化时间轴编排脚本（镜头、区域、边界、文字、图片）、编辑时实时预览、竖版 MP4 视频导出、JSON 脚本导出以便复用，以及内置 AI 助手引导创作。"
+  }
+}

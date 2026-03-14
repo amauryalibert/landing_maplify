@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Maplify — Éditeur d'animations cartographiques",
+    "description": "Maplify est un éditeur visuel en ligne pour créer des vidéos de cartes animées. Timeline, prévisualisation en direct, export MP4 vertical (TikTok, Shorts, Reels) et JSON. Pour créateurs, journalistes, enseignants.",
+    "ogTitle": "Maplify — Éditeur d'animations cartographiques",
+    "ogDescription": "Créez des scénarios d'animations cartographiques et exportez des vidéos verticales en quelques minutes. Pour créateurs, journalistes, enseignants."
+  },
+  "nav": {
+    "editor": "Éditeur",
+    "docs": "Documentation",
+    "joinWaitlist": "Rejoindre la waitlist"
+  },
+  "hero": {
+    "badge": "Éditeur d'animations cartographiques",
+    "subtitle": "Créer des vidéos de cartes animées.",
+    "description": "Maplify est un éditeur visuel pour créer des scénarios d'animations cartographiques et exporter des vidéos verticales.",
+    "openEditor": "Ouvrir l'éditeur",
+    "opening": "Ouverture…",
+    "joinWaitlist": "Rejoindre la waitlist",
+    "tagExport": "Export MP4 vertical",
+    "tagScenarios": "Scénarios JSON réutilisables",
+    "scenario": "Scénario · 00:07",
+    "loopPlayback": "Lecture en boucle"
+  },
+  "features": {
+    "label": "Fonctionnalités",
+    "heading": "Créer des scénarios d'animations cartographiques.",
+    "timelineTitle": "Timeline visuelle",
+    "timelineDesc": "Créez un scénario d'actions : caméra, zones, frontières, texte, images.",
+    "exportTitle": "Export vidéo",
+    "exportDesc": "Générez un rendu vidéo prêt pour TikTok, Shorts ou Reels.",
+    "jsonTitle": "Export JSON",
+    "jsonDesc": "Sauvegardez et réutilisez vos scénarios.",
+    "aiTitle": "Agent IA",
+    "aiDesc": "Un chat agent IA pour guider la création et accélérer vos vidéos."
+  },
+  "preview": {
+    "label": "Aperçu",
+    "heading": "L'éditeur Maplify en action.",
+    "subheading": "Préparez vos scènes, ajustez la caméra, placez vos labels et suivez la timeline comme dans un outil de montage.",
+    "caption": "Interface complète avec panneau d'actions, timeline et prévisualisation.",
+    "aiTitle": "Agent IA intégré",
+    "aiDesc": "Un chat agent IA vous aide à structurer un scénario, générer des idées de séquences et accélérer la production de vos vidéos.",
+    "timelineScenario": "Scénario",
+    "blockCamera": "Caméra",
+    "blockZone": "Zone",
+    "blockRoute": "Route",
+    "blockLabel": "Label",
+    "timelineBlockDesc": "Chaque bloc représente une action sur la timeline : caméra, zones, routes, labels."
+  },
+  "audience": {
+    "label": "Cibles",
+    "heading": "Pour qui ?",
+    "creatorsTitle": "Créateurs de contenu",
+    "creatorsDesc": "Storytelling géographique et vidéos explicatives.",
+    "journalistsTitle": "Journalistes",
+    "journalistsDesc": "Cartes pour expliquer l'actualité.",
+    "teachersTitle": "Enseignants",
+    "teachersDesc": "Supports visuels pour expliquer des territoires.",
+    "territorialTitle": "Communication territoriale",
+    "territorialDesc": "Présenter une région ou un projet."
+  },
+  "cta": {
+    "label": "Prêt à créer",
+    "heading": "Créer votre première vidéo de carte.",
+    "subheading": "Composez un scénario, animez votre carte et exportez un rendu vertical en quelques minutes.",
+    "openEditor": "Ouvrir l'éditeur",
+    "joinWaitlist": "Rejoindre la waitlist"
+  },
+  "footer": {
+    "copyright": "© 2026 Maplify. Tous droits réservés.",
+    "editor": "Éditeur",
+    "docs": "Documentation",
+    "github": "GitHub",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "CGU"
+  },
+  "waitlist": {
+    "title": "Votre premier scénario commence ici.",
+    "subtitle": "Maplify est encore en développement. Rejoignez la waitlist pour être informé dès l'ouverture de l'éditeur.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "nom@email.com",
+    "usageLabel": "Utilisation principale",
+    "sourceLabel": "Comment avez-vous découvert Maplify ?",
+    "submitJoin": "Rejoindre la waitlist",
+    "submitAlreadyJoined": "✓ Déjà inscrit",
+    "submitSaved": "✓ Scénario enregistré",
+    "submitSaving": "Enregistrement…",
+    "earlyAccess": "Accès anticipé pour les premiers utilisateurs.",
+    "successAlready": "Vous êtes déjà inscrit.",
+    "successNew": "Vous êtes sur la waitlist.",
+    "errorGeneric": "Une erreur est survenue. Réessayez dans un instant.",
+    "close": "Fermer",
+    "usage0": "Création de vidéos géographiques",
+    "usage1": "Journalisme / actualité",
+    "usage2": "Enseignement",
+    "usage3": "Marketing territorial",
+    "source0": "X, Facebook, Reddit",
+    "source1": "YouTube",
+    "source2": "TikTok, Instagram Reels, YT Shorts",
+    "source3": "ChatGPT, Claude, Gemini, etc."
+  },
+  "langSwitcher": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "zh": "中文",
+    "ar": "العربية"
+  },
+  "faq": {
+    "q1": "Qu'est-ce que Maplify ?",
+    "a1": "Maplify est un éditeur visuel en ligne pour créer des scénarios d'animations cartographiques et exporter des vidéos verticales (format TikTok, Shorts, Reels). Il propose une timeline, une prévisualisation en direct, l'export MP4 et JSON, et un agent IA pour aider à structurer les scénarios.",
+    "q2": "Pour qui est Maplify ?",
+    "a2": "Maplify s'adresse aux créateurs de contenu, journalistes, enseignants et équipes de communication territoriale qui veulent créer des vidéos de cartes animées pour le storytelling géographique, l'actualité, l'enseignement ou la présentation de territoires.",
+    "q3": "Quelles sont les fonctionnalités de Maplify ?",
+    "a3": "Timeline visuelle pour composer des scénarios (caméra, zones, frontières, texte, images), prévisualisation en direct pendant l'édition, export vidéo MP4 vertical, export JSON pour réutiliser les scénarios, et un agent IA intégré pour guider la création."
+  }
+}

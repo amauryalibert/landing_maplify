@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import LegalLayout from "../../components/LegalLayout";
+
+export const metadata: Metadata = {
+  title: "Mentions légales",
+  alternates: { canonical: "https://maplify.studio/mentions-legales" }
+};
 
 export default function MentionsLegales() {
   return (

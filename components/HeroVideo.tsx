@@ -2,9 +2,11 @@
 
 type HeroVideoProps = {
   isZoomed?: boolean;
+  scenario: string;
+  loopPlayback: string;
 };
 
-export default function HeroVideo({ isZoomed }: HeroVideoProps) {
+export default function HeroVideo({ isZoomed, scenario, loopPlayback }: HeroVideoProps) {
   return (
     <div className="surface relative rounded-xl border border-[var(--border)] p-4 shadow-panel">
       <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
@@ -31,8 +33,8 @@ export default function HeroVideo({ isZoomed }: HeroVideoProps) {
         </div>
       </div>
       <div className="mt-4 flex items-center justify-between text-xs text-[var(--text-secondary)]">
-        <span>Scénario · 00:07</span>
-        <span>Lecture en boucle</span>
+        <span>{scenario}</span>
+        <span>{loopPlayback}</span>
       </div>
     </div>
   );

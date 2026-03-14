@@ -3,17 +3,57 @@
 import { useState } from "react";
 import HeroVideo from "./HeroVideo";
 import { useWaitlist } from "./WaitlistProvider";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-export default function Hero() {
+type LangLabels = {
+  label: string;
+  fr: string;
+  en: string;
+  es: string;
+  zh: string;
+  ar: string;
+};
+
+type HeroProps = {
+  nav: { editor: string; docs: string; joinWaitlist: string };
+  badge: string;
+  subtitle: string;
+  description: string;
+  openEditor: string;
+  opening: string;
+  joinWaitlist: string;
+  tagExport: string;
+  tagScenarios: string;
+  scenario: string;
+  loopPlayback: string;
+  locale: string;
+  langLabels: LangLabels;
+};
+
+export default function Hero({
+  nav,
+  badge,
+  subtitle,
+  description,
+  openEditor,
+  opening,
+  joinWaitlist,
+  tagExport,
+  tagScenarios,
+  scenario,
+  loopPlayback,
+  locale,
+  langLabels
+}: HeroProps) {
   const { openModal } = useWaitlist();
-  const [opening, setOpening] = useState(false);
+  const [isOpening, setIsOpening] = useState(false);
 
   const handleOpen = () => {
-    if (opening) return;
-    setOpening(true);
+    if (isOpening) return;
+    setIsOpening(true);
     window.setTimeout(() => {
       openModal();
-      setOpening(false);
+      setIsOpening(false);
     }, 220);
   };
 
@@ -32,13 +72,14 @@ export default function Hero() {
             </span>
           </div>
           <div className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
-            <span className="hidden md:inline">Éditeur</span>
-            <span className="hidden md:inline">Documentation</span>
+            <span className="hidden md:inline">{nav.editor}</span>
+            <span className="hidden md:inline">{nav.docs}</span>
+            <LanguageSwitcher locale={locale} labels={langLabels} />
             <button
               onClick={openModal}
               className="rounded-md border border-[var(--border)] px-3 py-2 text-[var(--text-primary)] transition hover:border-[var(--border-light)]"
             >
-              Rejoindre la waitlist
+              {nav.joinWaitlist}
             </button>
           </div>
         </header>
@@ -46,7 +87,7 @@ export default function Hero() {
         <div className="mt-16 grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)] bg-[var(--accent-muted)] px-3 py-1 text-xs text-[var(--accent)]">
-              Éditeur d&apos;animations cartographiques
+              {badge}
             </div>
             <h1 className="font-display text-5xl font-semibold tracking-tight text-[var(--text-primary)] md:text-6xl">
               Maplify
@@ -54,35 +95,34 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 rounded-md border border-[var(--border)] bg-[var(--bg-secondary)] px-3 py-2 text-xs text-[var(--text-secondary)]">
               1080 × 1920 • 60 fps • Export MP4
             </div>
-            <p className="text-xl text-[var(--text-secondary)]">Créer des vidéos de cartes animées.</p>
+            <p className="text-xl text-[var(--text-secondary)]">{subtitle}</p>
             <p className="max-w-xl text-base text-[var(--text-secondary)]">
-              Maplify est un éditeur visuel pour créer des scénarios d’animations cartographiques et exporter des
-              vidéos verticales.
+              {description}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 rtl:flex-row-reverse">
               <button
                 onClick={handleOpen}
                 className="btn-primary rounded-md px-5 py-3 text-sm font-semibold"
               >
-                {opening ? (
+                {isOpening ? (
                   <span className="inline-flex items-center gap-2">
                     <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
-                    Ouverture…
+                    {opening}
                   </span>
                 ) : (
-                  "Ouvrir l’éditeur"
+                  openEditor
                 )}
               </button>
               <button
                 onClick={openModal}
                 className="btn-secondary rounded-md px-5 py-3 text-sm font-semibold"
               >
-                Rejoindre la waitlist
+                {joinWaitlist}
               </button>
             </div>
             <div className="flex items-center gap-6 text-xs text-[var(--text-muted)]">
-              <span>Export MP4 vertical</span>
-              <span>Scénarios JSON réutilisables</span>
+              <span>{tagExport}</span>
+              <span>{tagScenarios}</span>
             </div>
             <div className="hidden items-center gap-3 text-xs text-[var(--text-secondary)] md:flex">
               <div className="h-px flex-1 bg-[var(--accent)] opacity-60" />
@@ -92,7 +132,7 @@ export default function Hero() {
           </div>
 
           <div>
-            <HeroVideo isZoomed={opening} />
+            <HeroVideo isZoomed={isOpening} scenario={scenario} loopPlayback={loopPlayback} />
           </div>
         </div>
       </div>

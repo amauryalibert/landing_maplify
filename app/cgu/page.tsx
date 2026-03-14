@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import LegalLayout from "../../components/LegalLayout";
+
+export const metadata: Metadata = {
+  title: "Conditions générales d'utilisation",
+  alternates: { canonical: "https://maplify.studio/cgu" }
+};
 
 export default function CGU() {
   return (

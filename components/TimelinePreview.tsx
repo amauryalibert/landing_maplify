@@ -1,17 +1,33 @@
-const blocks = [
-  { label: "Caméra", color: "rgba(79, 126, 247, 0.95)", width: "18%", delay: "0s" },
-  { label: "Zone", color: "rgba(79, 126, 247, 0.8)", width: "14%", delay: "0.4s" },
-  { label: "Route", color: "rgba(79, 126, 247, 0.65)", width: "22%", delay: "0.8s" },
-  { label: "Label", color: "rgba(79, 126, 247, 0.5)", width: "12%", delay: "1.2s" },
-  { label: "Caméra", color: "rgba(79, 126, 247, 0.9)", width: "20%", delay: "1.6s" }
-];
+type TimelinePreviewProps = {
+  timelineScenario: string;
+  blockCamera: string;
+  blockZone: string;
+  blockRoute: string;
+  blockLabel: string;
+  timelineBlockDesc: string;
+};
 
-export default function TimelinePreview() {
+export default function TimelinePreview({
+  timelineScenario,
+  blockCamera,
+  blockZone,
+  blockRoute,
+  blockLabel,
+  timelineBlockDesc
+}: TimelinePreviewProps) {
+  const blocks = [
+    { label: blockCamera, color: "rgba(79, 126, 247, 0.95)", width: "18%", delay: "0s" },
+    { label: blockZone, color: "rgba(79, 126, 247, 0.8)", width: "14%", delay: "0.4s" },
+    { label: blockRoute, color: "rgba(79, 126, 247, 0.65)", width: "22%", delay: "0.8s" },
+    { label: blockLabel, color: "rgba(79, 126, 247, 0.5)", width: "12%", delay: "1.2s" },
+    { label: blockCamera, color: "rgba(79, 126, 247, 0.9)", width: "20%", delay: "1.6s" }
+  ];
+
   return (
     <div className="surface mt-6 rounded-xl border border-[var(--border)] p-4">
       <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
         <span className="uppercase tracking-[0.18em]">Timeline</span>
-        <span className="rounded-md border border-[var(--border)] px-2 py-1">Scénario</span>
+        <span className="rounded-md border border-[var(--border)] px-2 py-1">{timelineScenario}</span>
       </div>
       <div className="mt-4 rounded-lg border border-[var(--border-light)] bg-[var(--bg-tertiary)] p-4">
         <div className="timeline-track relative h-20 rounded-md border border-[var(--border)] bg-[var(--bg-primary)] p-3">
@@ -39,7 +55,7 @@ export default function TimelinePreview() {
         </div>
       </div>
       <p className="mt-3 text-xs text-[var(--text-secondary)]">
-        Chaque bloc représente une action sur la timeline : caméra, zones, routes, labels.
+        {timelineBlockDesc}
       </p>
     </div>
   );

@@ -1,19 +1,43 @@
 import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const primaryLinks = [
-  { label: "Éditeur", href: "#" },
-  { label: "Documentation", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "Contact", href: "mailto:contact@maplify.studio" }
-];
+type LangLabels = {
+  label: string;
+  fr: string;
+  en: string;
+  es: string;
+  zh: string;
+  ar: string;
+};
 
-const legalLinks = [
-  { label: "Mentions légales", href: "/mentions-legales" },
-  { label: "Confidentialité", href: "/confidentialite" },
-  { label: "CGU", href: "/cgu" }
-];
+type FooterProps = {
+  copyright: string;
+  links: { editor: string; docs: string; github: string; contact: string };
+  legal: { legal: string; privacy: string; terms: string };
+  locale: string;
+  langLabels: LangLabels;
+};
 
-export default function Footer() {
+export default function Footer({
+  copyright,
+  links,
+  legal,
+  locale,
+  langLabels
+}: FooterProps) {
+  const primaryLinks = [
+    { label: links.editor, href: "#" },
+    { label: links.docs, href: "#" },
+    { label: links.github, href: "#" },
+    { label: links.contact, href: "mailto:contact@maplify.studio" }
+  ];
+
+  const legalLinks = [
+    { label: legal.legal, href: "/mentions-legales" },
+    { label: legal.privacy, href: "/confidentialite" },
+    { label: legal.terms, href: "/cgu" }
+  ];
+
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--bg-primary)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10">
@@ -37,7 +61,10 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <div className="text-xs text-[var(--text-muted)]">© 2026 Maplify. Tous droits réservés.</div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="text-xs text-[var(--text-muted)]">{copyright}</div>
+          <LanguageSwitcher locale={locale} labels={langLabels} dropUp />
+        </div>
       </div>
     </footer>
   );
